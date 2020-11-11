@@ -42,20 +42,20 @@ function seeProfile() {
       .then(response => {
         callMSGraph(graphConfig.graphMeEndpoint, response.accessToken, updateUI);
         profileButton.classList.add("d-none");
-        mailButton.classList.remove("d-none");
+        // mailButton.classList.remove("d-none");
       }).catch(error => {
         console.log(error);
       });
   }
 }
 
-function readMail() {
-  if (myMSALObj.getAccount()) {
-    getTokenPopup(tokenRequest)
-      .then(response => {
-        callMSGraph(graphConfig.graphMailEndpoint, response.accessToken, updateUI);
-      }).catch(error => {
-        console.log(error);
-      });
-  }
-}
+// function readMail() {
+//   if (myMSALObj.getAccount()) {
+//     getTokenPopup(tokenRequest)
+//       .then(response => {
+//         callMSGraph(graphConfig.graphMailEndpoint, response.accessToken, updateUI);
+//       }).catch(error => {
+//         console.log(error);
+//       });
+//   }
+// }

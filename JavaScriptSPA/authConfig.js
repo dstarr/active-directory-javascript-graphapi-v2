@@ -4,9 +4,9 @@
 // visit https://azuread.github.io/microsoft-authentication-library-for-js/docs/msal/modules/_authenticationparameters_.html
 const msalConfig = {
   auth: {
-    clientId: "Enter_the_Application_Id_Here",
-    authority: "Enter_the_Cloud_Instance_Id_HereEnter_the_Tenant_Info_Here",
-    redirectUri: "Enter_the_Redirect_Uri_Here",
+    clientId: "3cab413b-05db-41eb-ac76-574e8ece33f6",
+    authority: "https://login.microsoftonline.com/common/",
+    redirectUri: "http://localhost:3000/",
   },
   cache: {
     cacheLocation: "sessionStorage", // This configures where your cache will be stored
@@ -20,7 +20,7 @@ const loginRequest = {
   scopes: ["openid", "profile", "User.Read"]
 };
 
-// Add here scopes for access token to be used at MS Graph API endpoints.
-const tokenRequest = {
-  scopes: ["Mail.Read"]
-};
+// // Add here scopes for access token to be used at MS Graph API endpoints.
+// const tokenRequest = {
+//   scopes: ["Mail.Read"]
+// };

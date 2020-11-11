@@ -28,7 +28,7 @@ function authRedirectCallBack(error, response) {
           console.log(err)
         } finally {
           profileButton.classList.add('d-none');
-          mailButton.classList.remove('d-none');
+          // mailButton.classList.remove('d-none');
         }
       } else {
           console.log("token type is:" + response.tokenType);
@@ -64,7 +64,7 @@ function getTokenRedirect(request, endpoint) {
                 console.log(err)
               } finally {
                 profileButton.classList.add('d-none');
-                mailButton.classList.remove('d-none');
+                // mailButton.classList.remove('d-none');
               }
             }
         }
@@ -80,10 +80,10 @@ function seeProfile() {
   getTokenRedirect(loginRequest, graphConfig.graphMeEndpoint);
 }
   
-function readMail() {
-  if (accessToken) {
-    callMSGraph(graphConfig.graphMailEndpoint, accessToken, updateUI);
-  } else {
-    getTokenRedirect(tokenRequest, graphConfig.graphMailEndpoint);
-  }
-}
+// function readMail() {
+//   if (accessToken) {
+//     callMSGraph(graphConfig.graphMailEndpoint, accessToken, updateUI);
+//   } else {
+//     getTokenRedirect(tokenRequest, graphConfig.graphMailEndpoint);
+//   }
+// }
