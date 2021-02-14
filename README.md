@@ -44,28 +44,23 @@ A simple vanilla JavaScript single-page application which demonstrates how to co
 
 ## Prerequisites
 
-- [Node](https://nodejs.org/en/) must be installed to run this sample.
+- [Node.js](https://nodejs.org/en/) must be installed to run this sample.
 - A modern web browser. This sample uses **ES6** conventions and will not run on **Internet Explorer**. See [here](https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/samples/msal-core-samples/VanillaJSTestApp/app/ie11-sample) for an IE11-compatibility.
 
 ## Setup
 
 1. [Register a new application](https://docs.microsoft.com/azure/active-directory/develop/scenario-spa-app-registration) in the [Azure Portal](https://portal.azure.com). Ensure that the application is enabled for the [implicit flow](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-implicit-grant-flow).
 2. Open the [/JavaScriptSPA/authConfig.js](./JavaScriptSPA/authConfig.js) file and provide the required configuration values.
-3. On the command line, navigate to the root of the repository, and run `npm install` to install the project dependencies via npm.
 
 ## Running the sample
 
 1. Configure authentication and authorization parameters:
    1. Open `authConfig.js`
-   2. Replace the string `"Enter_the_Application_Id_Here"` with your app/client ID on AAD Portal.
-   3. Replace the string `"Enter_the_Cloud_Instance_Id_HereEnter_the_Tenant_Info_Here"` with `"https://login.microsoftonline.com/common/"` (*note*: This is for multi-tenant applications located on the global Azure cloud. For more information, see the [documentation](https://docs.microsoft.com/azure/active-directory/develop/quickstart-v2-javascript)).
-   4. Replace the string `"Enter_the_Redirect_Uri_Here"` with the redirect uri you setup on AAD Portal.
-2. Configure the parameters for calling MS Graph API:
-   1. Open `graphConfig.js`.
-   2. Replace the string `"Enter_the_Graph_Endpoint_Herev1.0/me"` with `"https://graph.microsoft.com/v1.0/me"`.
-   3. Replace the string `"Enter_the_Graph_Endpoint_Herev1.0/me/messages"` with `"https://graph.microsoft.com/v1.0/me/messages"`.
-3. To start the sample application, run `npm start`.
-4. Finally, open a browser to [http://localhost:3000](http://localhost:3000).
+   2. set the `clientId` parameter to your app/client ID from the AAD Portal.
+1. Open a terminal in the root project directory.
+   1. Run `npm install` to get all dependencies.
+   1. Run `npm start` to start the web server.
+1. Finally, open a browser to [http://localhost:3000](http://localhost:3000).
 
 > How did we do? Consider [sharing your experience with us](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR73pcsbpbxNJuZCMKN0lURpUQktGUlJTSjdEWkYzWjRKTlRTUFNYUDlFViQlQCN0PWcu).
 
