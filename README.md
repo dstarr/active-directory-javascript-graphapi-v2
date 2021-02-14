@@ -50,6 +50,7 @@ A simple vanilla JavaScript single-page application which demonstrates how to co
 ## Setup
 
 1. [Register a new application](https://docs.microsoft.com/azure/active-directory/develop/scenario-spa-app-registration) in the [Azure Portal](https://portal.azure.com). Ensure that the application is enabled for the [implicit flow](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-implicit-grant-flow).
+   - This means selecting the checkbox on your application that reads **ID tokens (used for implicit and hybrid flows)**.
 2. Open the [/JavaScriptSPA/authConfig.js](./JavaScriptSPA/authConfig.js) file and provide the required configuration values.
 
 ## Running the sample
